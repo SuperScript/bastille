@@ -58,10 +58,10 @@ bastille_root_check
 
 case "${OPTION}" in
     -q|--quiet)
-        OPTION="-a"
+        OPTION="${bastille_cp_option:--a}"
         ;;
     *)
-        OPTION="-av"
+        OPTION="${bastille_cp_option:--a}v"
         ;;
 esac
 

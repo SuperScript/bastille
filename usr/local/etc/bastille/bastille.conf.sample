@@ -51,6 +51,12 @@ bastille_compress_gz_options="-1 -v"                                  ## default
 bastille_decompress_gz_options="-k -d -c -v"                          ## default "-k -d -c -v"
 bastille_export_options=""                                            ## default "" predefined export options, e.g. "--safe --gz"
 
+## CP and RCP options
+bastille_cp_option="-a"                                               ## default "-a" single term only
+bastille_cp_option="-a"                                               ## default "-a" single term only
+bastille_rcp_option="-a"                                              ## default "-a" single term only
+bastille_rcp_option="-a"                                              ## default "-a" single term only
+
 ## Networking
 bastille_network_loopback="bastille0"                                 ## default: "bastille0"
 bastille_network_pf_ext_if="ext_if"                                   ## default: "ext_if"

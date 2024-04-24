@@ -60,10 +60,10 @@ fi
 
 case "${OPTION}" in
     -q|--quiet)
-        OPTION="-a"
+        OPTION="${bastille_rcp_option:--a}"
         ;;
     *)
-        OPTION="-av"
+        OPTION="${bastille_rcp_option:--a}v"
         ;;
 esac
 
