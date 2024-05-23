@@ -120,6 +120,8 @@ release_update() {
         env PAGER="/bin/cat" freebsd-update ${OPTION} --not-running-from-cron -b "${bastille_releasesdir}/${TARGET}" \
         fetch --currently-running "${TARGET_TRIM}"
         env PAGER="/bin/cat" freebsd-update ${OPTION} --not-running-from-cron -b "${bastille_releasesdir}/${TARGET}" \
+        updatesready --currently-running "${TARGET_TRIM}" || return 0
+        env PAGER="/bin/cat" freebsd-update ${OPTION} --not-running-from-cron -b "${bastille_releasesdir}/${TARGET}" \
         install --currently-running "${TARGET_TRIM}"
     else
         error_exit "${TARGET} not found. See 'bastille bootstrap'."
