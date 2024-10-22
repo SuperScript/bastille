@@ -692,7 +692,7 @@ if [ -n "${EMPTY_JAIL}" ]; then
         error_exit "Error: Empty jail option can't be used with other options."
     fi
 elif [ -n "${LINUX_JAIL}" ]; then
-    if [ -n "${EMPTY_JAIL}" ] || [ -n "${THICK_JAIL}" ] || [ -n "${CLONE_JAIL}" ]; then
+    if [ -n "${EMPTY_JAIL}" ] || [ -n "${VNET_JAIL}" ] || [ -n "${THICK_JAIL}" ] || [ -n "${CLONE_JAIL}" ]; then
         error_exit "Error: Linux jail option can't be used with other options."
     fi
 elif [ -n "${CLONE_JAIL}" ] && [ -n "${THICK_JAIL}" ]; then
